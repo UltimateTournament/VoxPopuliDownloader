@@ -9,12 +9,11 @@ subsets=(
   "sl_v2" "et_v2" "lt_v2" "pt_v2" "bg_v2" "el_v2" "lv_v2" "mt_v2" "sv_v2" "da_v2"
 )
 
-# Iterate over the subsets and run the voxpopuli.get_unlabelled_data command
 for subset in "${subsets[@]}"; do
   echo "downloading ${subset}"
 
   # Running the command and capturing the output and return code
-  python -m voxpopuli.get_unlabelled_data --root "$ROOT" --subset "$subset"
+  python -m voxpopuli.download_audios --root "$ROOT" --subset "$subset"
   retcode=$?
 
   # Check the return code of the previous command
