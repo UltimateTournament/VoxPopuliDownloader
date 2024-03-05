@@ -24,7 +24,7 @@ for subset in "${subsets[@]}"; do
     exit 1
   else
     echo "$output"
-    echo "subset $subset completed!"
+    echo "subset $subset downloaded"
 
     # sync with R2
     echo syncing with R2
@@ -32,6 +32,7 @@ for subset in "${subsets[@]}"; do
 
     # delete the output
     rm -rf $ROOT/*
+    echo "subset $subset saved to r2"
   fi
 done
 
