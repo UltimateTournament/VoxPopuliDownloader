@@ -9,3 +9,5 @@ Uses a custom Dockerfile and requirements.txt because the repo is poorly maintai
 `AWS_SECRET_ACCESS_KEY`
 `S3_BUCKET`
 `S3_ENDPOINT`
+
+Just run `./run.sh` and that's all
