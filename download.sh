@@ -3,10 +3,10 @@
 # Define the subsets
 subsets=(
   "en" "de"
-  # "fr" "es" "pl" "it" "ro" "hu" "cs" "nl" "fi" "hr" "sk" "sl" "et"
-  # "lt" "pt" "bg" "el" "lv" "mt" "sv" "da" "en_v2" "de_v2" "fr_v2" "es_v2"
-  # "pl_v2" "it_v2" "ro_v2" "hu_v2" "cs_v2" "nl_v2" "fi_v2" "hr_v2" "sk_v2"
-  # "sl_v2" "et_v2" "lt_v2" "pt_v2" "bg_v2" "el_v2" "lv_v2" "mt_v2" "sv_v2" "da_v2"
+  "fr" "es" "pl" "it" "ro" "hu" "cs" "nl" "fi" "hr" "sk" "sl" "et"
+  "lt" "pt" "bg" "el" "lv" "mt" "sv" "da" "en_v2" "de_v2" "fr_v2" "es_v2"
+  "pl_v2" "it_v2" "ro_v2" "hu_v2" "cs_v2" "nl_v2" "fi_v2" "hr_v2" "sk_v2"
+  "sl_v2" "et_v2" "lt_v2" "pt_v2" "bg_v2" "el_v2" "lv_v2" "mt_v2" "sv_v2" "da_v2"
 )
 
 # Iterate over the subsets and run the voxpopuli.get_unlabelled_data command
