@@ -27,7 +27,7 @@ for subset in "${subsets[@]}"; do
 
     # sync with R2
     echo syncing with R2
-    aws cp $ROOT s3://$S3_BUCKET/voxpopuli_raw/ --recursive --region=us-east-1 --endpoint-url=$S3_ENDPOINT
+    aws s3 cp $ROOT s3://$S3_BUCKET/voxpopuli_raw/ --recursive --region=us-east-1 --endpoint-url=$S3_ENDPOINT
 
     # delete the output
     rm -rf $ROOT/*
