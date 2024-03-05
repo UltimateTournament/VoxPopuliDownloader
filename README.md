@@ -8,3 +8,4 @@ Uses a custom Dockerfile and requirements.txt because the repo is poorly maintai
 `AWS_ACCESS_KEY_ID`
 `AWS_SECRET_ACCESS_KEY`
 `S3_BUCKET`
+`S3_ENDPOINT`
