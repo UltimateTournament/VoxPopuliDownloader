@@ -8,7 +8,7 @@ RUN git clone https://github.com/facebookresearch/voxpopuli.git .
 
 COPY requirements.txt .
 
-RUN apt install s3cmd
+RUN apt install s3cmd -y
 
 # use our requirements
 RUN pip install -r requirements.txt
