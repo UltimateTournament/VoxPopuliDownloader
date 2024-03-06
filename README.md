@@ -15,7 +15,8 @@ Just run `./run.sh` and that's all
 
 ---
 
-Set `TAR_DIR` env var, then run `download_tars.sh`. This will be Xtb in size on disk.
+Set `TAR_DIR` env var, then run `download_tars.sh`. This will be Xtb in size on disk. This uses resumable downloads, 
+so if they ever get stopped you can just rerun `download_tars.sh` and it will pick up from where it left off. 
 
 Set the `AWS_ACCESS_KEY_ID` `AWS_SECRET_ACCESS_KEY` `S3_BUCKET` 
 `S3_ENDPOINT` env vars.
