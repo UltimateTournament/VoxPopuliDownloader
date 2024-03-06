@@ -3,7 +3,7 @@
 while IFS= read -r line
 do
 
-  curl -O --output-dir $TAR_DIR $line &
+  wget $line -P $TAR_DIR -c &
 
 done < tars.txt
 
