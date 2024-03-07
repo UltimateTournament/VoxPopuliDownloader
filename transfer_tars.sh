@@ -1,0 +1,1 @@
+cat tars.txt | xargs -P10 -I% rclone -vP copyurl % r2:/tts-data/voxpopuli_test -a --no-clobber

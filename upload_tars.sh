@@ -1,21 +1,6 @@
 echo uploading tars to r2
 
-# First move the _2's into another dir so we can upload them sequentially
-mkdir -p $TAR_DIR/../tar_2
-for two in $(find $TAR_DIR -name '*_2.tar')
-
-do
-  # Upload it sequentially so problems are easier to spot (aws cli will do sequential for --recursive anyway)anyway
-  mv $two $TAR_DIR/../tar_2
-
-done
-
-# For each tar file in the tar dir
-for f in $(find $TAR_DIR -name '*.tar')
-
-do
-  # Upload it sequentially so problems are easier to spot (aws cli will do sequential for --recursive anyway)anyway
-  echo uploading $f
-  aws s3 cp $f s3://$S3_BUCKET/voxpopuli_tars/ --region=us-east-1 --endpoint-url=$S3_ENDPOINT
-
-done
+# rclone will do this WAY faster than any aws s3 commands.
+# It does have to read all the files first to make chunks for multipart uploads
+# so the performance is limited by the disk more than the network most likely
+rclone copy -vP --transfers 4 --checkers 20 --max-backlog 999999 --s3-upload-concurrency 20 $TAR_DIR r2:tts-data/voxpopuli_tars/
