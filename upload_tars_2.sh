@@ -11,7 +11,7 @@ do
 done
 
 # For each tar file in the tar dir
-for f in $(find $TAR_DIR -name '*.tar')
+for f in $(find $TAR_DIR/../tar_2 -name '*.tar')
 
 do
   # Upload it sequentially so problems are easier to spot (aws cli will do sequential for --recursive anyway)anyway

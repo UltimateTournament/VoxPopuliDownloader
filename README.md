@@ -22,7 +22,8 @@ ended up being 7.8T on disk according to `du -h`.
 Set the `AWS_ACCESS_KEY_ID` `AWS_SECRET_ACCESS_KEY` `S3_BUCKET` 
 `S3_ENDPOINT` env vars.
 
-If you want to save the tars then run `upload_tars.sh` which will compress and upload the tar files.
+If you want to save the tars then run `upload_tars.sh` and `upload_tars_2.sh` which will upload the tar 
+files in 2 batches.
 
 Then set `AUDIO_DIR` env var, and run `untar.sh`. This will untar all the audio files into `AUDIO_DIR` and delete 
 the tar files.
