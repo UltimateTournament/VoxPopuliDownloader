@@ -4,7 +4,7 @@ for f in $(find $TAR_DIR -name '*.tar')
 
 do
   # Max compression
-  xz -z -c -9 -e -T 0 > $f.xz
+  xz -z -c -9 -e -T 0 $f > $f.xz
   # Upload it
   aws s3 cp $f.xz s3://$S3_BUCKET/voxpopuli_tars_compressed/ --region=us-east-1 --endpoint-url=$S3_ENDPOINT
   # Delete the compressed file
